@@ -24,14 +24,14 @@
 
     :root {
       --base: #ffc600;
-      --spacing: 10px;
-      --blur: 10px;
+      --spacing: 10;
+      --blur: 10;
     }
 
     img {
-      padding: var(--spacing);
       background: var(--base);
-      filter: blur(var(--blur));
+      padding: calc(var(--spacing) * 1px);
+      filter: blur(calc(var(--blur) * 1px));
     }
 
     span {
