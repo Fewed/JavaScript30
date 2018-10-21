@@ -18,28 +18,42 @@
     }
 
     // Regular
-
+        console.log(dogs);
     // Interpolated
-
+        console.log(`a %s b ${dogs[0].age}`, 7);
     // Styled
-
+        console.log(`%c %s`, "color: red", "test");
     // warning!
-
+        console.warn(1);
     // Error :|
-
+        console.error(2);
     // Info
-
+        console.info("text");
     // Testing
-
+        console.assert(true, "true");
+        console.assert(false, "false");
     // clearing
-
+        console.clear();
     // Viewing DOM Elements
-
+        console.dir(document.querySelector("p"));
     // Grouping together
-
+        
+        dogs.map(dog => {
+          console.group(dog.name);
+          Object.keys(dog).map(key => console.log(key, dog[key]))
+          console.groupEnd();
+        });
+        
     // counting
-
+        let cnt = 3;
+        while(cnt--) console.count("cnt");
+        console.count("cnt2");
     // timing
+        console.time();
+        let arr = [];
+        while(arr.length !== 1000000) arr.push((new Date()).getTime());
+        console.log(arr[arr.length-1] - arr[0]);
+        console.timeEnd();
 
   </script>
 </body>
