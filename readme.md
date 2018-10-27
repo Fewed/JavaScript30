@@ -6,3 +6,5 @@
 
 04 - Array Cardio Day 1. Новое: console.table, сортировка с использованием тернарного оператора. Обратить внимание на возврат значений из функций в перебирающих методах и обращение к несуществующим ключам объекта.
 https://koukia.ca/top-6-ways-to-search-for-a-string-in-javascript-and-performance-benchmarks-ce3e9b81ad31
+
+13 - debouncing & throttling
