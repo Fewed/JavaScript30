@@ -8,3 +8,4 @@
 https://koukia.ca/top-6-ways-to-search-for-a-string-in-javascript-and-performance-benchmarks-ce3e9b81ad31
 
 13 - debouncing & throttling
+14 - deep copy of objects

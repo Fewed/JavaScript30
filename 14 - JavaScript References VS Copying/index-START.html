@@ -14,7 +14,16 @@
 
     // and we want to make a copy of it.
 
+    const playersCopy = players;
+    console.log(players, playersCopy);
+
     // You might think we can just do something like this:
+
+    function check(origin, copy) {
+      copy.push("Jack");
+      if (origin.length !== copy.length) console.log("ne");
+    }
+    // check(players, playersCopy);
 
     // however what happens when we update that array?
 
@@ -28,9 +37,21 @@
 
     // one way
 
+    const playersCopy2 = players.slice();
+  //  check(players, playersCopy2);
+
     // or create a new array and concat the old one in
 
+    const playersCopy3 = [].concat(players);
+   // check(players, playersCopy3);
+
     // or use the new ES6 Spread
+
+    const playersCopy4 = [...players];
+   // check(players, playersCopy4);
+
+    const playersCopy5 = Array.from(players);
+    check(players, playersCopy5);
 
     // now when we update it, the original one isn't changed
 
@@ -44,9 +65,27 @@
 
     // and think we make a copy:
 
+    const personCopy = person;
+    console.log(person, personCopy);
+
     // how do we take a copy instead?
 
+    const personCopy2 = Object.assign({}, person);
+
+    function check2(origin, copy) {
+      copy.age = 30;
+      if (origin.age !== copy.age) console.log("ne");
+    }
+  //  check2(person, personCopy2);
+
+
     // We will hopefully soon see the object ...spread
+
+    const personCopy3 = {...person};
+   // check2(person, personCopy3);
+
+    const personCopy4 = JSON.parse(JSON.stringify(person));
+    check2(person, personCopy4);
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
 
