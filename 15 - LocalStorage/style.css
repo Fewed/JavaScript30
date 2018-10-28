@@ -66,7 +66,9 @@
     }
 
     .plates input:checked + label:before {
-      content: '🌮';
+      content: url(https://visualpharm.com/assets/50/Whole%20Fish-595b40b85ba036ed117db8c0.svg);
+      display: inline-block;
+      width: 20px;
     }
 
     .add-items {
