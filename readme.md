@@ -9,3 +9,8 @@ https://koukia.ca/top-6-ways-to-search-for-a-string-in-javascript-and-performanc
 
 13 - debouncing & throttling
 14 - deep copy of objects
+
+16 - destructuring assignment /*
+const obj = {a: 1, b: 2};
+const {a, b} = obj;
+*/
